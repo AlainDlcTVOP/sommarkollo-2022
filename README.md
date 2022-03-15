@@ -8,7 +8,7 @@ Tekniska krav:
 Demo: https://AlainDlcTVOP.github.io/sommarkollo-2022
 
 ### Beskrivning för att hämta ut en inkommen kolloanmälan i beeceptor
-Använd gärna beeceptor.com för att fånga och inspektera anropet. Verktyget är dessutom är kostnadsfritt och öppet att använda genom att gå till URL: https://beeceptor.com/console/sommarkolloanmlan .<br>
+Använd gärna beeceptor.com för att fånga och inspektera anropet. Verktyget är dessutom är kostnadsfritt och öppet att använda genom att gå till URL: https://beeceptor.com/console/sommarkolloanmalan .<br>
 Verktyget beeceptor behöver vara igång för att anmälan ska fångas upp i runtime och visas därefter direkt på skärmen beeceptor konsolen.
 
 ### FAQ

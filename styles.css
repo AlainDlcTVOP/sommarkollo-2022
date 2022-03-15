@@ -1,20 +1,20 @@
 /* Övergripande utseende*/
 .body {
     box-sizing: border-box;
-    *border: 2px solid black;
     padding: 25px 50px 50px 50px;
     font-family: "Balsamiq Sans";
 }
 
 a {
     color: black;
+    text-decoration: none;
 }
 
 .flex-contianer {
     display: flex;
 }
 
-/* Style till Aktiviteterna  */
+/* Style till aktiviteterna  */
 h3 {
     margin-top: 0.5em;
     margin-bottom: 0.1em;
@@ -53,7 +53,7 @@ h3 {
     margin: 11px;
 }
 
-/* Formulär för kolloAnmälan - Personuppgifter */
+/* Formulär för kolloanmälan - Personuppgifter */
 .icon {
     height: 25px;
     width: 25px;
@@ -100,7 +100,7 @@ h3 {
     width: 400px;
 }
 
-/* Formulär för kolloAnmälan - Dina intresse */
+/* Formulär för kolloanmälan - Dina intresse */
 #intressen-list {
     width: 600px;
     border: 1px solid black;
@@ -110,6 +110,7 @@ h3 {
 
 #intressen-input-validator {
     padding: 15px;
+    font-size: 0.9em;
     background-color: lightcoral;
     width: 300px;
 }
@@ -137,7 +138,7 @@ h3 {
     background-color: rgb(230, 231, 217);
 }
 
-/* Formulär för kolloAnmälan - Boende */
+/* Formulär för kolloanmälan - Boende */
 .option-contianer {
     display: flex;
     align-items: center;
@@ -148,7 +149,7 @@ h3 {
     margin-right: 2em;
 }
 
-/* Formulär för kolloAnmälan - Utskick och anrop meddelande  */
+/* Formulär för kolloanmälan - Utskick och anrop meddelande  */
 #skicka-anmalan-knapp {
     background-color: darkgray;
     cursor: pointer;
