@@ -1,0 +1,169 @@
+/* Övergripande utseende*/
+.body {
+    box-sizing: border-box;
+    *border: 2px solid black;
+    padding: 25px 50px 50px 50px;
+    font-family: "Balsamiq Sans";
+}
+
+a {
+    color: black;
+}
+
+.flex-contianer {
+    display: flex;
+}
+
+/* Style till Aktiviteterna  */
+h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+/* Header content */
+.aktiviteter-container {
+    display: table;
+}
+
+.aktiviteter-box {
+    display: table-row;
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin-right: 50px;
+}
+
+.aktiviteter-box:last-child {
+    margin-right: 0px;
+}
+
+.aktiviteter-box-img {
+    display: block;
+    height: 110px;
+    width: 100%;
+    border-bottom: 0.5px solid black;
+    background-repeat: no-repeat;
+    background-size: 200px 100px;
+}
+
+.aktiviteter-box-text {
+    margin: 11px;
+}
+
+/* Formulär för kolloAnmälan - Personuppgifter */
+.icon {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+}
+
+.info {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+}
+
+.infonamn-for-input {
+    color: #666666;
+    font-size: 0.8em;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+#anmalan-till-kollo .namn {
+    color: black;
+    fill-opacity: 0.2;
+    width: 279px;
+    height: 27px;
+}
+
+#anmalan-till-kollo .epost {
+    color: black;
+    fill-opacity: 0.2;
+    width: 279px;
+    height: 27px;
+}
+
+#age-dropdownmenu {
+    width: 7em;
+}
+
+#anmalan-till-kollo #check {
+    margin-bottom: 5px;
+    padding: 4px;
+}
+
+#intressen-input {
+    width: 400px;
+}
+
+/* Formulär för kolloAnmälan - Dina intresse */
+#intressen-list {
+    width: 600px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 3px;
+}
+
+#intressen-input-validator {
+    padding: 15px;
+    background-color: lightcoral;
+    width: 300px;
+}
+
+#intressen-list:empty {
+    display: none;
+}
+
+.intressen-delete-knapp-img {
+    content: url('./assests/trash.png');
+    padding-top: 1px;
+    float: right;
+    height: 15px;
+    width: 15px;
+}
+
+.intressen-row {
+    padding: 5px 8px 2px 5px;
+    text-align: start;
+    height: 20px;
+}
+
+.intressen-row:nth-child(even) {
+    background-size: 100%;
+    background-color: rgb(230, 231, 217);
+}
+
+/* Formulär för kolloAnmälan - Boende */
+.option-contianer {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.option-contianer label {
+    margin-right: 2em;
+}
+
+/* Formulär för kolloAnmälan - Utskick och anrop meddelande  */
+#skicka-anmalan-knapp {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+#form-sucessful-anmalan-message {
+    padding: 15px;
+    width: 700px;
+    background-color: lightgreen;
+    border: 1px solid black;
+}
+
+#form-error-message {
+    padding: 15px;
+    width: 700px;
+    background-color: lightcoral;
+    border: 1px solid black;
+}

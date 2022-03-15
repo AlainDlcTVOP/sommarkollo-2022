@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arbetsuppgift</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Balsamiq Sans" rel="stylesheet"/>
+</head>
+
+<body class="body">
+<div>
+    <h1>Kollo sommaren 2022</h1>
+</div>
+<div>
+    <h4>
+        Kollo är en lägerverksamhet för barn som är mellan 10 och 15 år gamla.
+        Läs om<br/>
+        några av våra aktiviteter och skicka in en anmälan om du är intreserad
+        av kollo 2022.
+    </h4>
+</div>
+<div>
+    <h2>Populära aktiviteter</h2>
+</div>
+<div class="aktiviteter-container">
+    <div class="aktiviteter-box">
+        <a href="#">
+            <div class="aktiviteter-box-img" style="background-image: url('./assests/matlagning.jpg')">
+            </div>
+        </a>
+        <div class="aktiviteter-box-text">
+            <a href="#">
+                <h3>
+                    Matlagning
+                </h3>
+            </a>
+            <span>Vi lagar mat och har roligt tillsammans</span>
+        </div>
+    </div>
+    <div class="aktiviteter-box">
+        <a href="#">
+            <div class="aktiviteter-box-img" style="background-image: url('./assests/lekar.jpg')">
+            </div>
+        </a>
+        <div class="aktiviteter-box-text">
+            <a href="#">
+                <h3>Lekar</h3>
+            </a>
+            <span>Roliga lekar både ute och inomhus</span>
+        </div>
+    </div>
+    <div class="aktiviteter-box">
+        <a href="#">
+            <div class="aktiviteter-box-img" style="background-image: url('./assests/slojd.jpg')">
+            </div>
+        </a>
+        <div class="aktiviteter-box-text">
+            <a href="#">
+                <h3>
+                    Slöjd
+                </h3>
+            </a>
+            <span>Träslöjd och syslöjd i fina nya lokaler</span>
+        </div>
+    </div>
+    <div class="aktiviteter-box">
+        <a href="#">
+            <div class="aktiviteter-box-img" style="background-image: url('./assests/idrott.jpg')">
+            </div>
+        </a>
+        <div class="aktiviteter-box-text">
+            <a href="#">
+                <h3>
+                    Idrott
+                </h3>
+            </a>
+            <span>Testa på olika nya idrotter och sporter</span>
+        </div>
+    </div>
+</div>
+
+<div>
+    <form name="anmalan-till-kollo" onsubmit="javascript:sendAnmalan(); " action="javascript:void(0)" method="post">
+        <div>
+            <h2>Anmäl dig till kollo</h2>
+        </div>
+        <div>
+            <h4>Personuppgifter</h4>
+        </div>
+        <div>
+            Namn
+            </br>
+            <input class="namn" type="text" name="namn" required/><br/>
+            <div class="flex-contianer">
+                <img src="./assests/info.png" alt="img" class="info">
+                <p class="infonamn-for-input"> Skriv ditt för- och efternamn </p>
+            </div>
+        </div>
+        <br/>
+        E-post
+        <br/>
+        <input class="epost" type="email" name="epost" required/><br/>
+        <div>
+            <br/>
+        </div>
+        <div>
+            Ålder:<br/>
+        </div>
+        <select name="alder" id="age-dropdownmenu">
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select><br/>
+        <div>
+            <h4>Dina intressen</h4>
+        </div>
+        <div class="flex-contianer">
+            <input id="intressen-input" class="text" type="text" placeholder="T.ex. Idrott, Slöjd, Matlagning..."/>
+            <a href="javascript:addInterestList();">
+                <img src="./assests/icon.png" alt="img" class="icon"/>
+            </a>
+
+        </div>
+        <br/>
+        <div>
+            <br>
+            <div id="intressen-input-validator" style="display: none;">
+                Intresse listan måste innehålla minst ett intresse!
+            </div>
+            <div id="intressen-list"></div>
+            <textarea id="intressen-list-text" class="text" type="text" name="intressen" hidden readonly></textarea>
+        </div>
+
+        <div>
+            <h4>Boande</h4>
+            <h5>Kan du tänka dig dela rum med en kompis</h5>
+        </div>
+        <div class="option-contianer">
+            <label>
+                <input id="kompis-radio-no" type="radio" name="kan_du_bo_med_en_kompis" value="Nej" checked
+                       onclick="javascript:resetKompis()"/>
+                Nej
+            </label>
+            <label>
+                <input id="kompis-radio-yes" type="radio" name="kan_du_bo_med_en_kompis" value="Ja"
+                       onclick="javascript:showKompis()"/>
+                Ja
+            </label>
+        </div>
+        <br>
+        <div id="kompis-yes" style="display: none;">
+            <div>
+                Jag kan tänka mig att bo ihop med en
+            </div>
+            <br>
+            <div class="option-contianer">
+                <label>
+                    <input type="checkbox" name="jag_kan_bo_ihop_med" value="Tjej"/>
+                    Tjej
+                </label>
+                <label>
+                    <input type="checkbox" name="jag_kan_bo_ihop_med" value="Kille"/>
+                    Kille
+                </label>
+            </div>
+        </div>
+        <div>
+            <h5>Jag kan ta med</h5>
+        </div>
+        <div class="option-contianer">
+            <label>
+                <input type="checkbox" name="jag_kan_ta_med" value="Sovsäck"/>
+                Sovsäck
+            </label>
+            <label>
+                <input type="checkbox" name="jag_kan_ta_med" value="Kudde"/>Kudde<br/>
+            </label>
+            <label>
+                <input type="checkbox" name="jag_kan_ta_med" value="Liggunderlag"/>Liggunderlag<br/>
+            </label>
+        </div>
+        <div>
+            <br>
+            <!-- Ajax loigk lätt anmällan skickar få bekräftelse -->
+        </div>
+        <input id="skicka-anmalan-knapp" type="submit" value="Skicka in anmälan"/>
+    </form>
+    <br>
+    <br>
+    <div id="form-sucessful-anmalan-message" style="display:none">
+        <h1>
+            Anmälan till kollo har mottagits
+        </h1>
+        <table>
+            <tbody>
+            <tr>
+                <td>Namn:</td>
+                <td id="sent_namn">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>E-post:</td>
+                <td id="sent_epost">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Ålder:</td>
+                <td id="sent_alder">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Intressen:</td>
+                <td id="sent_intressen">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Kan du tänka dig dela rum med en kompis?</td>
+                <td id="sent_kan_du_bo_med_en_kompis">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Jag kan tänka mig att bo ihop med en:</td>
+                <td id="sent_jag_kan_bo_ihop_med">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Jag kan ta med:</td>
+                <td id="sent_jag_kan_ta_med">&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="form-error-message" style="display:none">
+        Ett tekniskt fel har inträffat. Anmälan till kollo har inte mottagits.
+    </div>
+</div>
+<script src="logik.js"></script>
+</body>
+
+</html>
